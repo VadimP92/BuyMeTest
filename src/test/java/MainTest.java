@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class MainTest {
     private static ExtentReports reports = new ExtentReports();
     private static ExtentTest test = reports.createTest("BuyMeTest in Selenium", "Automation test for BuyMe website");
-
+////  THIS WILL OPEN THE WEBSITE ////
     @BeforeClass
     public static void be4Test() throws Exception {
      TestSIngelton.getDriverInstance();
