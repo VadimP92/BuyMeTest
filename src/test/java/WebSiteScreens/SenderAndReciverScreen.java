@@ -11,7 +11,7 @@ import org.testng.Assert;
 public class SenderAndReciverScreen extends BasePage {
     private static WebDriver driver;
     private static String reciverRealName= "Johny Bravo";
-    private static String giverName= "Vadim the Great";
+    private static String giverName= "Vadim The Great"; // due to the fact i already registers to BuyMe,it fills my name automatically and on assert test comes up as "Actual: vadim Vadim The Great",it prints vadim
 
     public void senderAndReciver() throws Exception {
         driver= TestSIngelton.getDriverInstance();
@@ -50,15 +50,18 @@ public class SenderAndReciverScreen extends BasePage {
     }
     public void enterSms()throws Exception{
         Thread.sleep(1000);
+        TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.id("sms"))).clear();
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.id("sms"))).sendKeys("0546303567");
     }
     public void giftGiverName()throws Exception{
-        Assert.assertEquals(driver.findElement(By.xpath("//div[3]/div[2]/label/input")).getAttribute("value"), giverName);
         Thread.sleep(1000);
+        TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/label/input"))).clear();
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[2]/label/input"))).sendKeys("Vadim The Great");
+        Assert.assertEquals(driver.findElement(By.xpath("//div[3]/div[2]/label/input")).getAttribute("value"), giverName);
     }
     public void reciverPhoneNum()throws Exception{
         Thread.sleep(1000);
+        TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[3]/label/input"))).clear();
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/div[3]/label/input"))).sendKeys("0546303567");
     }
     public void procedToPayment()throws Exception{
