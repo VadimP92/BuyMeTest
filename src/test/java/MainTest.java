@@ -20,7 +20,6 @@ TestSIngelton.getUrl();
         ExtentSparkReporter htmlReporter = new ExtentSparkReporter("C://Users//extent.html");
             reports.attachReporter(htmlReporter);
     }
-
   /// THIS TEST TO CHECK REGISTER PROCESS //////
 //    @Test(priority = 0)
 //    public void signUpTest() throws Exception {
@@ -36,10 +35,9 @@ TestSIngelton.getUrl();
 //
 //
 //    }
-
-
     //// THIS TEST TO LOGING AFTER REGISTRATION ///
 
+    //// THIS TEST TO LOG ING WITH EMAIL AND PASSWORD AND SUBMIT ///
     @Test(priority = 1)
     public void logInTest() throws Exception {
         new LogInRegisterScreen().SignUpRegisterElement();
@@ -48,7 +46,6 @@ TestSIngelton.getUrl();
     }
 
 /////  THIS TEST TO CHECK LIST PROCESS AND SELECT FROM CATEGORY'S  /////
-
 @Test(priority = 2)
 public void homeScreenTest() throws Exception{  // Test to find and fill the boxes of category's and search for a
         Thread.sleep(2000);

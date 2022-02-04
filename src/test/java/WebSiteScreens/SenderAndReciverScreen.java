@@ -27,9 +27,11 @@ public class SenderAndReciverScreen extends BasePage {
         Report.takePicture();
     }
     public void reciverName()throws Exception{
-        Assert.assertEquals(driver.findElement(By.xpath("//form/div[2]/div[1]/label/input")).getAttribute("value") , reciverRealName);
+//        Assert.assertEquals(driver.findElement(By.xpath("//form/div[2]/div[1]/label/input")).getAttribute("value") , reciverRealName);
 //        sendKeysToElement(By.xpath("//form/div[2]/div[1]/label/input"),"Johny Bravo");
+        TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form/div[2]/div[1]/label/input"))).clear();
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form/div[2]/div[1]/label/input"))).sendKeys("Johny Bravo");
+        Assert.assertEquals(driver.findElement(By.xpath("//form/div[2]/div[1]/label/input")).getAttribute("value") , reciverRealName);
     }
     public void choseCelebration()throws Exception{
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form/div[2]/div[2]/label/div/div[1]/span"))).click();
