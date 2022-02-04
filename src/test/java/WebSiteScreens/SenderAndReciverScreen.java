@@ -24,6 +24,7 @@ public class SenderAndReciverScreen extends BasePage {
         giftGiverName();
         reciverPhoneNum();
         procedToPayment();
+        choosePayment();
         Report.takePicture();
     }
     public void reciverName()throws Exception{
@@ -68,6 +69,10 @@ public class SenderAndReciverScreen extends BasePage {
     }
     public void procedToPayment()throws Exception{
         clickElement(By.xpath("//form/div[4]/div[2]/button"));
+    }
+
+    public void choosePayment()throws Exception{
+        clickElement(By.xpath("//div[1]/div[3]/div/div[2]/span"));
     }
 
 }
