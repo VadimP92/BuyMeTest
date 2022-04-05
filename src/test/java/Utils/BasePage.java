@@ -2,9 +2,6 @@ package Utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.util.NoSuchElementException;
 
 public class BasePage {
     public void clickElement(By locator) throws Exception { // function for clicking an element

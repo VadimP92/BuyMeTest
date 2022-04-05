@@ -20,11 +20,9 @@ public class LoginScreen extends BasePage {
 
     }
     private void enterEmail() throws Exception {
-//        sendKeysToElement(By.xpath("//div[2]/div[3]/form/div[1]/label/input"),"wokinstorm@outlook.com");
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/div[3]/form/div[1]/label/input"))).sendKeys("wokinstorm@outlook.com");
     }
 private void enterPassword() throws Exception {
-//        sendKeysToElement(By.xpath("//div[2]/div[3]/form/div[2]/label/input"),"Milana2007");
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[2]/div[3]/form/div[2]/label/input"))).sendKeys("Milana2007");
 }
 public void  enterSubmit()throws Exception{

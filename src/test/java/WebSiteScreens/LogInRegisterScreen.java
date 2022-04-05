@@ -1,21 +1,12 @@
 package WebSiteScreens;
 
 import Utils.BasePage;
-import Utils.Constant;
 import Utils.TestSIngelton;
 import org.openqa.selenium.By;
-import org.openqa.selenium.InvalidSelectorException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
-import java.sql.DriverPropertyInfo;
 import java.time.Duration;
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
 
 public class LogInRegisterScreen extends BasePage {
     private static WebDriver driver;
@@ -52,7 +43,7 @@ registerButtonElement();
         clickElement(By.xpath("//div/div/div[3]/div[1]/span"));
     }
     public void firstNameElement() throws Exception {
-        driver.findElement(By.xpath("//div[3]/div[2]/div[3]/form/div[1]/label/input")).sendKeys("vadim");
+        driver.findElement(By.xpath("//div[3]/form/div[1]/label/input")).sendKeys("vadim");
 //        clickElement(By.xpath("//div[3]/div[2]/div[3]/form/div[1]/label/input"));// constructor for the first name element
 //        sendKeysToElement(By.xpath("//div[3]/div[2]/div[3]/form/div[1]/label/input"),"Vadim");
 

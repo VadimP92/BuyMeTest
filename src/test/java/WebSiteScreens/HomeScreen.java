@@ -8,9 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class HomeScreen extends BasePage {
     private static WebDriver driver;
@@ -32,15 +29,14 @@ Report.test.log(Status.PASS,"Details entered successfully");
 
 
     public  void pricePointElement() throws Exception {
-//        TestSIngelton.getDriverInstance();
 clickElement(By.className("selected-name"));
     }
     public void selectPriceElement()throws Exception{
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div/form/label[1]/div/div[2]/ul/li[2]/span"))).click(); // tries looking with ID/css/linktext/ xpath worked
-//     wait.until(ExpectedConditions.elementToBeClickable(By.id("ember1158"))).click();
+
     }
     public void selectRegionElement()throws Exception{
-//        TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span[class=selected-name]"))).click();
+
         TestSIngelton.wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div/header/div[3]/div/div/form/label[2]/div/div[1]/span"))).click(); // same here,xpath found to be the only useful way i found to find the element
 
     }

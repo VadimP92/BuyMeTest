@@ -18,7 +18,7 @@ public class Report {
 
 public static void beforeAll() throws  Exception{
     String cwd = System.getProperty("User.dir");
-    ExtentSparkReporter htmlReporter= new ExtentSparkReporter(cwd+"\\REPORT.HTML");
+    ExtentSparkReporter htmlReporter= new ExtentSparkReporter(cwd+"\\report.html");
     report=new ExtentReports();
     report.attachReporter(htmlReporter);
     test = report.createTest("BuyMeTest", "BuyMe website test");

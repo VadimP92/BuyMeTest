@@ -1,9 +1,7 @@
-import Utils.Report;
 import Utils.TestSIngelton;
 import WebSiteScreens.*;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -21,28 +19,16 @@ TestSIngelton.getUrl();
             reports.attachReporter(htmlReporter);
     }
   /// THIS TEST TO CHECK REGISTER PROCESS //////
-//    @Test(priority = 0)
-//    public void signUpTest() throws Exception {
-//       new LogInRegisterScreen().firstScreen();
-////
-//        new LogInRegisterScreen().SignUpRegisterElement();
-//        new LogInRegisterScreen().RegisterElement();
-//        new LogInRegisterScreen().firstNameElement();
-//    new LogInRegisterScreen().emailElement();
-//    new LogInRegisterScreen().passwordElement();
-//    new LogInRegisterScreen().passwordConfirmElement();
-//    new LogInRegisterScreen().registerButtonElement();
-//
-//
-//    }
+
     //// THIS TEST TO LOGING AFTER REGISTRATION ///
 
-    //// THIS TEST TO LOG ING WITH EMAIL AND PASSWORD AND SUBMIT ///
+    // THIS TEST TO LOG ING WITH EMAIL AND PASSWORD AND SUBMIT ///
     @Test(priority = 1)
     public void logInTest() throws Exception {
         new LogInRegisterScreen().SignUpRegisterElement();
         new LoginScreen().loginScreen();
         reports.attachReporter();
+
     }
 
 /////  THIS TEST TO CHECK LIST PROCESS AND SELECT FROM CATEGORY'S  /////
